@@ -13,9 +13,6 @@ function App() {
         <div className="main">
             <ToolBar />
             <div className="main-board">
-                <nav>
-                    
-                </nav>
                 <BalanceBoard />
                 <DistributeBoard />
                 <MonthlySpendBoard />
