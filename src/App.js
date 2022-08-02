@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+
+import ToolBar from './components/ToolBar'
+import MonthlySpendBoard from './components/MonthlySpendBoard'
+import DistributeBoard from './components/DistrubuteBoard'
+import BalanceBoard from './components/BalanceBoard'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const [currentPage, setCurrentPage] = useState('dashboard')
+
+    return (
+        <div className="main">
+            <ToolBar />
+            <div className="main-board">
+                <nav>
+                    
+                </nav>
+                <BalanceBoard />
+                <DistributeBoard />
+                <MonthlySpendBoard />
+            </div> 
+        </div>
+    
+  )
 }
 
 export default App;
